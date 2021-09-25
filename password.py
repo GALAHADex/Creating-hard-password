@@ -1,14 +1,14 @@
 import secrets
 import string
 
-# Parola uzunluğu
+# Password length
 length = secrets.choice(range(15, 25))
 
-# Harfler, sayılar ve özel karakterler
+# Letters, numbers and special characters
 symbols = string.ascii_letters \
     + string.digits \
     + string.punctuation
-# Parola oluşturuluyor
+# Generating password...
 password = "".join(secrets.choice(symbols)
                    for i in range(length))
 
